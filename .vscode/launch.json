@@ -1,32 +1,25 @@
 {
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "Run main",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/main",
-            "args": [
-
-                "-fdiagnostics-color=always",
-                "-g",
-                "/workspaces/cpp_tictactoe_tree/main.cpp",
-                "-o",
-                "/workspaces/cpp_tictactoe_tree/main"
-            ],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": "build"
-        }
+      {
+        "name": "Run (Integrated Terminal)",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/main",
+        "args": [],                           // any runtime args go here
+        "cwd": "${workspaceFolder}",
+        "console": "integratedTerminal",     // ← tell VS Code to use the terminal
+        "externalConsole": false,
+        "preLaunchTask": "build",
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ]
+      }
     ]
-}
+  }
+  
